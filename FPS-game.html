@@ -4,36 +4,86 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | My project</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <title>FPS Game Demo - J-games</title>
+    <!-- <link rel="shortcut icon" href="TemplateData/favicon.ico"> -->
     <link rel="stylesheet" href="TemplateData/style.css">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-    <!-- My Navigation html: -->
-    <p>Navigation:</p>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="FPS-game.html">FPS game</a></li>
-    </ul>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i></a>
 
-    <p>Make sure you have hardware acceleration enabled on your browser!</p>
+            <img class="w3-bar-item" src="favicon_io\favicon-32x32.png" alt="JG logo"></img>
 
-    <!-- Unity game -->
-    <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" width=960 height=540></canvas>
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-                <div id="unity-progress-bar-full"></div>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">GAMES<i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="FPS-game.html" class="w3-bar-item w3-button">FPS Game Demo</a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-padding-large w3-hover-red w3-hide-small w3-right">
+                <i class="fa fa-search"></i>
+            </a>
+            <input type="text" class="w3-bar-item w3-padding-large w3-input w3-right" placeholder="Search..">
+        </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+        <!-- <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a> -->
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="More">GAMES<i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="FPS-game.html" class="w3-bar-item w3-button">FPS Game Demo</a>
             </div>
         </div>
-        <div id="unity-warning"> </div>
-        <div id="unity-footer">
-            <div id="unity-webgl-logo"></div>
-            <div id="unity-fullscreen-button"></div>
-            <div id="unity-build-title">My project</div>
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:12px">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="description">
+            <h2 class="w3-wide">FPS-Game Demo</h2>
+            <p >Make sure you have hardware acceleration enabled on your browser!</p>
+        </div>
+
+
+
+        <!-- Unity game -->
+        <div id="unity-container" class="unity-desktop">
+            <canvas id="unity-canvas" width=960 height=540></canvas>
+            <div id="unity-loading-bar">
+                <div id="unity-logo"></div>
+                <div id="unity-progress-bar-empty">
+                    <div id="unity-progress-bar-full"></div>
+                </div>
+            </div>
+            <div id="unity-warning"> </div>
+            <div id="unity-footer">
+                <div id="unity-webgl-logo"></div>
+                <div id="unity-fullscreen-button"></div>
+                <div id="unity-build-title">My project</div>
+            </div>
         </div>
     </div>
     <script>
