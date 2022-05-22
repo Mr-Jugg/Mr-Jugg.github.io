@@ -112,7 +112,7 @@
       if (type == 'error') div.style = 'background: red; padding: 10px;';
       else {
         if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-        setTimeout(function () {
+        setTimeout(function() {
           warningBanner.removeChild(div);
           updateBannerVisibility();
         }, 5000);
@@ -121,11 +121,11 @@
     }
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/WebGL Builds.loader.js";
+    var loaderUrl = buildUrl + "/Maths Coaster.loader.js";
     var config = {
-      dataUrl: buildUrl + "/WebGL Builds.data.gz",
-      frameworkUrl: buildUrl + "/WebGL Builds.framework.js.gz",
-      codeUrl: buildUrl + "/WebGL Builds.wasm.gz",
+      dataUrl: buildUrl + "/Maths Coaster.data.unityweb",
+      frameworkUrl: buildUrl + "/Maths Coaster.framework.js.unityweb",
+      codeUrl: buildUrl + "/Maths Coaster.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Maths Coaster",
